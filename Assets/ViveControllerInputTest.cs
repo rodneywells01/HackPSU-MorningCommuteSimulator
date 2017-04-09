@@ -53,14 +53,15 @@ public class ViveControllerInputTest : MonoBehaviour {
             Debug.Log(gameObject.name + " Grip Press");
 
             GameObject powerball = GameObject.Find("Powerball");
-
+            
             Rigidbody rb = powerball.GetComponent<Rigidbody>();
             rb.velocity = Vector3.zero;
 
-            Vector3 startlocation = new Vector3(247.913f, 80.943f, -201.933f);
+            GameObject camera = GameObject.Find("Camera (eye)");
+
+            Vector3 adder = new Vector3(0f, .1f, -.7f);
+            Vector3 startlocation = camera.transform.position + adder;
             powerball.transform.position = startlocation;
-
-
         }
 
         // 5
