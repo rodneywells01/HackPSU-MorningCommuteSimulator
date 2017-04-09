@@ -15,7 +15,7 @@ public class Powerballscript : MonoBehaviour {
 	void Update () {
 		// Check to see if hitting something 
 		// If hitting, get point value of object and add to your points. Destroy hit object.
-		Debug.Log(totalpoints);
+		//Debug.Log(totalpoints);
 	}
 
 	void OnCollisionEnter(Collision collision)
