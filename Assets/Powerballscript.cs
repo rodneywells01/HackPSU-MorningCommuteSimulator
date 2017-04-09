@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Powerballscript : MonoBehaviour {
 
@@ -55,8 +56,11 @@ public class Powerballscript : MonoBehaviour {
 				Destroy (contact.otherCollider.gameObject);
 			}
 
+            // Update Scoreboard
+            Text score = GameObject.Find("Scoreboard").GetComponent<Text>();
+            score.text = "Score: " + totalpoints;
 
-		}
+        }
 
 
 		//if (collision.relativeVelocity.magnitude > 2)

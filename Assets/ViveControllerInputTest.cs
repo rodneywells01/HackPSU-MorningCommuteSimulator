@@ -51,6 +51,16 @@ public class ViveControllerInputTest : MonoBehaviour {
         if (Controller.GetPressDown(SteamVR_Controller.ButtonMask.Grip))
         {
             Debug.Log(gameObject.name + " Grip Press");
+
+            GameObject powerball = GameObject.Find("Powerball");
+
+            Rigidbody rb = powerball.GetComponent<Rigidbody>();
+            rb.velocity = Vector3.zero;
+
+            Vector3 startlocation = new Vector3(247.913f, 80.943f, -201.933f);
+            powerball.transform.position = startlocation;
+
+
         }
 
         // 5

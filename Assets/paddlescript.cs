@@ -21,7 +21,7 @@ public class paddlescript : MonoBehaviour {
     {
         Debug.Log(collision.gameObject.name);
 
-        if (collision.gameObject.name.Contains("Ball"))
+        if (collision.gameObject.name.Contains("Powerball"))
         {            
             GameObject entityhit = collision.gameObject;
             Rigidbody body = entityhit.GetComponent<Rigidbody>();
