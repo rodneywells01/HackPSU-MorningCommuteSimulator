@@ -23,11 +23,15 @@ public class paddlescript : MonoBehaviour {
 
         if (collision.gameObject.name.Contains("Powerball"))
         {            
+            // Knock it back. 
             GameObject entityhit = collision.gameObject;
             Rigidbody body = entityhit.GetComponent<Rigidbody>();
             body.AddForce(myrb.velocity * -100);
             Debug.Log("Hit!");
-            //body.AddForce()
+
+            // Vibrate
+            SteamVR_Controller.Input(1).TriggerHapticPulse(100);
+            //SteamVR_Controller.Input([the index of the controller you want to vibrate]).TriggerHapticPulse([length in microseconds as ushort]);
         }
 
     }
